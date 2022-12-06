@@ -3,28 +3,28 @@ $(document).ready(function(){
   
   let ms = 0;
   let sec = 0;
-  let sec10 = 0;
   let min = 0;
+  let hour = 0;
   let timer = 0;
   
   function count(){
     $("#ms").html(ms);
     $("#sec").html(sec);
-    $("#sec10").html(sec10);
     $("#min").html(min);
+    $("#hour").html(hour);
 
     ms++;
     if(ms == 10){
       ms = 0;
       sec++;
     };
-    if(sec == 10){
+    if(sec == 60){
       sec = 0;
-      sec10++;
-    };
-    if(sec10 == 6){
-      sec10 = 0;
       min++;
+    };
+    if(min == 60){
+      min = 0;
+      hour++;
     };
   };
     
@@ -61,13 +61,13 @@ $(document).ready(function(){
 
     ms = 0;
     sec = 0;
-    sec10 = 0;
     min = 0;
+    hour = 0;
     
     $("#ms").html(ms);
     $("#sec").html(sec);
-    $("#sec10").html(sec10);
     $("#min").html(min);
+    $("#hour").html(hour);
 
   });
   

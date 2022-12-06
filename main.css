@@ -1,3 +1,8 @@
 p {
   font-size:30px;
 }
+
+#hour,#min,#sec,#ms{
+    font-size:50px;
+    padding:10px;
+}
